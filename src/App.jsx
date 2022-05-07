@@ -1,12 +1,21 @@
 import { useState } from 'react'
 import Nav from "./components/Nav";
+import Search from "./components/Search";
 
 function App() {
-  const [count, setCount] = useState(0)
+const [darkMode,setDarkMode] = useState("false");
+
+const darkModeToggle = () =>{
+    setDarkMode(!darkMode);
+}
+
 
   return (
-    <div className="App">
-      <Nav/>
+    <div className={`App ${!darkMode ? "dark" : null}`}>
+        <div className={"dark:bg-slate-900"}>
+            <Nav toggle={darkModeToggle}></Nav>
+            <Search></Search>
+        </div>
     </div>
   )
 }
