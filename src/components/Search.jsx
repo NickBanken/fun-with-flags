@@ -12,7 +12,7 @@ function Search (){
                 </span>
                 <input
                     className=" placeholder:text-slate-400 inline-block bg-white w-full border-slate-300
-                    rounded-md py-3 pl-9 pr-3  focus:outline-none text-xs "
+                    rounded-sm py-3 pl-9 pr-3  focus:outline-none text-xs "
                     placeholder="Search for anything..." type="text" name="search"/>
             </label>
             <Filter></Filter>

@@ -13,7 +13,7 @@ const darkModeToggle = () =>{
   return (
     <div className={`App ${!darkMode ? "dark" : null}`}>
         <div className={"dark:bg-slate-900"}>
-            <Nav toggle={darkModeToggle}></Nav>
+            <Nav toggle={darkModeToggle} darkMode={darkMode}></Nav>
             <Search></Search>
         </div>
     </div>
