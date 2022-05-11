@@ -1,23 +1,18 @@
-import { useState } from 'react'
-import Nav from "./components/Nav";
-import Search from "./components/Search";
+import Home from "./pages/Home";
+import React from 'react'
+import {Routes, Route} from "react-router-dom";
+import Country from "./pages/Country";
+
 
 function App() {
-const [darkMode,setDarkMode] = useState("false");
-
-const darkModeToggle = () =>{
-    setDarkMode(!darkMode);
-}
-
-
-  return (
-    <div className={`App ${!darkMode ? "dark" : null}`}>
-        <div className={"dark:bg-slate-900"}>
-            <Nav toggle={darkModeToggle} darkMode={darkMode}></Nav>
-            <Search></Search>
+    return(
+        <div className={"App"}>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/country" element={<Country/>}/>
+            </Routes>
         </div>
-    </div>
-  )
+    )
 }
 
 export default App

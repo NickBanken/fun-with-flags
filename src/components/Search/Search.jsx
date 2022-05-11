@@ -17,8 +17,6 @@ function Search (){
             </label>
             <Filter></Filter>
         </div>
-
-
     )
 }
 
