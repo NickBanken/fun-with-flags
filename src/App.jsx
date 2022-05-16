@@ -6,7 +6,7 @@ import Country from "./pages/Country";
 
 function App() {
     return(
-        <div className={"App"}>
+        <div className={`App`}>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/country" element={<Country/>}/>

@@ -4,7 +4,17 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'darkmode-light': '#2B3743',
+        'darkmode-dark': '#202D36'
+      },
+      height:{
+        'vw-5':'5vw',
+        'vw-10':'10vw',
+        'vw-15':'15vw',
+      }
+    },
   },
   plugins: [],
   darkMode: 'class',
