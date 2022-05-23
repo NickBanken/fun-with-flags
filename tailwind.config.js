@@ -13,9 +13,14 @@ module.exports = {
         'vw-5':'5vw',
         'vw-10':'10vw',
         'vw-15':'15vw',
+        'vw-20':'20vw',
+        'vw-50':'50vw',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
   darkMode: 'class',
+
 }

@@ -47,11 +47,11 @@ export default function Filter({setFilter}){
         arrow.current.style.rotate = "0deg"
     }
 
-    const options = ["All","Africa","Americas","Asia","Europe","Oceania"];
+    const options = ["All","Africa","Americas","Asia","Antarctic","Europe","Oceania"];
 
     return(
       <>
-        <div className={"my-10 relative md:min-w-[200px] w-2/3 md:w-[200px]"}>
+        <div className={"relative md:min-w-[200px] w-2/3 md:w-[200px]"}>
             <div ref={dropdown} onClick={toggle} className={"cursor-pointer tracking-wider bg-white rounded-md dark:bg-darkmode-light dark:text-white p-5 pr-12 drop-shadow-lg relative"}>
                 {selectedOption || "Filter by Region"}
                 <svg ref={arrow} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 origin-top-left absolute ease-in duration-300 right-0 top-1/2 transform -translate-x-[50%] -translate-y-[50%]" viewBox="0 0 20 20" fill="currentColor">
@@ -60,7 +60,7 @@ export default function Filter({setFilter}){
             </div>
             {isOpen &&
                 <div ref={dropdownMenu}>
-                    <ul className={"mt-2 bg-white p-4 pr-12 drop-shadow-lg dark:bg-darkmode-light dark:text-white absolute w-full rounded-md"}>
+                    <ul className={"mt-2 bg-white p-4 pr-12 drop-shadow-lg dark:bg-darkmode-light dark:text-white absolute w-full rounded-md z-40"}>
                         {options.map((option,index)=>{
                             return <li className={"py-1.5 cursor-pointer"} key={index} onClick={onOptionClicked(option)}>{option}</li>;
                         })}

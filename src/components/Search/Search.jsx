@@ -10,10 +10,10 @@ function Search ({setFilter,setSearch}){
 
 
     return(
-        <div className={"mx-5 sm:mx-10 sm:block md:flex justify-between"}>
-            <label className="relative flex sm:w-full md:w-[35rem] pt-10 mb-10 shadow-md md:mr-5">
+        <div className={"mx-5 sm:mx-10 sm:block md:flex items-center py-10 justify-between"}>
+            <label className="relative flex w-full max-w-[35rem] shadow-md md:mr-5 mb-10 md:mb-0">
                 <span className="sr-only">Search</span>
-                <span className="absolute inset-y-0 left-5 flex items-center pl-3 pt-10">
+                <span className="absolute inset-y-0 left-5 flex items-center pl-3 ">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 stroke-slate-400 dark:stroke-white" fill="none" viewBox="0 0 24 24" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
