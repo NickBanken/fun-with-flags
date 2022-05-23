@@ -1,10 +1,13 @@
+import {Link} from "react-router-dom";
 
 
 function Nav ({toggle,darkMode}){
     return (
         <nav className={"dark:bg-darkmode-light shadow-md"}>
             <div className={"sm:max-w-screen-lg sm:max-w-screen-2xl m-auto flex justify-between px-5 sm:px-10"}>
-                <h1 className={"py-5 dark:text-white text-md sm:text-lg font-bold"}>Where in the world?</h1>
+                <Link to={"/"}>
+                    <h1 className={"py-5 dark:text-white text-md sm:text-lg font-bold"}>Where in the world?</h1>
+                </Link>
                 <button className={"py-5"} onClick={toggle}>
                     {darkMode ?
                         <>
