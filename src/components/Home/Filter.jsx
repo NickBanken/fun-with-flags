@@ -1,6 +1,11 @@
 import Card from "../Card";
+import PaginatedItems from "../PaginatedItems";
+import React from "react";
+import {useState} from "react";
 
-const Filter = ({countries,filter,search}) => {
+const Filter = ({countries,filter,search,page,setPage,itemOffset,setItemOffset}) => {
+
+
     let filteredCountries =
         countries.filter(
             (country) => {
@@ -22,13 +27,14 @@ const Filter = ({countries,filter,search}) => {
             )
 
     if (filteredCountries.length == 0) {
-        return <h2 className={"absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"}>Sorry, no results
+        return <h2 className={"absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 dark:text-white"}>Sorry, no results
             were found</h2>
     }
 
-    return filteredCountries.map((country, i) => {
-        return <Card key={i} country={country} i={i}/>
-    })
+    return (
+            <PaginatedItems itemsPerPage={12} items={filteredCountries} setPage={setPage} page={page} setItemOffset={setItemOffset} itemOffset={itemOffset}/>
+    )
+
 }
 
 export default Filter;

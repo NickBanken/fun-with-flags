@@ -20,7 +20,7 @@ function menuHandler(ref,ref2,setIsOpen,arrow) {
     }, [ref]);
 }
 
-export default function Filter({setFilter}){
+export default function Filter({setFilter,setPage,setItemOffset}){
 
     const [isOpen, setIsOpen] = useState();
     const [selectedOption,setSelectedOption] = useState();
@@ -45,6 +45,8 @@ export default function Filter({setFilter}){
         setIsOpen(false);
         setFilter(value);
         arrow.current.style.rotate = "0deg"
+        setPage(0)
+        setItemOffset(0)
     }
 
     const options = ["All","Africa","Americas","Asia","Antarctic","Europe","Oceania"];

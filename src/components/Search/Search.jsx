@@ -1,11 +1,13 @@
 import Filter from "./Filter";
 import {useRef} from "react";
 
-function Search ({setFilter,setSearch}){
+function Search ({setFilter,setSearch,setPage,setItemOffset}){
     const input = useRef();
 
     function searchHandler() {
         setSearch(input.current.value)
+        setPage(0)
+        setItemOffset(0)
     }
 
 
@@ -23,7 +25,7 @@ function Search ({setFilter,setSearch}){
                     rounded-md py-5 pl-20 pr-3  focus:outline-none"
                     placeholder="Search for a country..." ref={input} type="text" name="search" onChange={searchHandler}/>
             </label>
-            <Filter setFilter={setFilter}></Filter>
+            <Filter setFilter={setFilter} setPage={setPage} setItemOffset={setItemOffset}></Filter>
         </div>
     )
 }

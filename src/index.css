@@ -5,3 +5,42 @@
 body{
     font-family: 'Nunito Sans', sans-serif;
 }
+
+.pagination{
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    justify-content: center;
+
+    font-weight: bold;
+    color:#20358A;
+    margin: auto; padding: 50px 0;
+}
+
+.pagination .selected{
+    color:#1C7CFF;
+}
+
+.pagination .selected::before{
+    content: "";
+}
+
+.dark .pagination .selected{
+    color:#1fc7e0;
+}
+
+.pagination .break{
+   color:#5C78A3;
+}
+
+
+.pagination li a{
+    text-align: center;
+    padding: .7rem;
+}
+
+@media (min-width: 640px) {
+    .pagination li a{
+        padding: 1rem;
+    }
+}

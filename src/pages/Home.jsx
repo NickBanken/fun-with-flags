@@ -6,7 +6,6 @@ import Loader from "../components/Loader";
 import {useFetch} from "../hooks/useFetch";
 
 const Home = ({darkMode,data,loading}) =>{
-
     return (
             <HomeInterface countries={data} loading={loading} darkMode={darkMode}/>
         )
