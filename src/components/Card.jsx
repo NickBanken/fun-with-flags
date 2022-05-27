@@ -4,13 +4,14 @@ import {Link} from "react-router-dom";
 
 
 const Card = ({country}) =>{
+    console.log(country)
     return(
     <li className={"shadow-md rounded-lg overflow-hidden dark:bg-darkmode-light h-min text-md cursor-pointer"}>
         <Tooltip title={country.name.common} placement={"top"}>
 
         <Link to={{pathname:`/country/${country.name.common}`}}>
             <div className={"sm:h-vw-20 md:h-vw-15 lg:h-vw-10 h-vw-50 "}>
-                <img className={"object-cover w-full h-full"} src={country.flags.png} alt=""/>
+                <img className={"w-full h-full object-cover"} src={`${country.flags.png.slice(0,-3)}webp`} alt=""/>
             </div>
             <div className={"p-5 mb-10"}>
                 <h3 className={"font-black text-lg mb-5 line-clamp-1"}>{country.name.common}</h3>
