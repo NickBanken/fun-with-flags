@@ -23,16 +23,13 @@ function Items({ currentItems }) {
 function PaginatedItems({ itemsPerPage,items,page,setPage,itemOffset,setItemOffset }) {
     // We start with an empty list of items.
     const [currentItems, setCurrentItems] = useState(null);
-    const [pageCount, setPageCount] = useState(0);
+    const [pageCount, setPageCount] = useState(1);
     // Here we use item offsets; we could also use page offsets
     // following the API or data you're working with.
 
     useEffect(() => {
         // Fetch items from another resources.
-        console.log(page);
-
         const endOffset = itemOffset + itemsPerPage;
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
         setCurrentItems(items.slice(itemOffset, endOffset));
         setPageCount(Math.ceil(items.length / itemsPerPage));
     }, [itemOffset, itemsPerPage,items,pageCount]);
@@ -40,17 +37,10 @@ function PaginatedItems({ itemsPerPage,items,page,setPage,itemOffset,setItemOffs
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % items.length;
-        console.log(
-            `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
         setPage(event.selected)
-        console.log(newOffset)
         setItemOffset(newOffset);
     };
 
-    const check = () =>{
-        console.log("check")
-    }
 
     return (
         <>
@@ -58,7 +48,6 @@ function PaginatedItems({ itemsPerPage,items,page,setPage,itemOffset,setItemOffs
                 breakLabel="..."
                 nextLabel=">"
                 onPageChange={handlePageClick}
-                onPageActive={check}
                 forcePage={page}
                 pageRangeDisplayed={3}
                 marginPagesDisplayed={1}
@@ -66,7 +55,6 @@ function PaginatedItems({ itemsPerPage,items,page,setPage,itemOffset,setItemOffs
                 previousLabel="<"
                 renderOnZeroPageCount={null}
                 className={"pagination dark:text-white"}
-                currentPage={12}
             />
 
             <Items currentItems={currentItems} />

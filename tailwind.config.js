@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateRows: {
+        // Simple 8 row grid
+        '8': 'repeat(8, minmax(0, 1fr))',
+      },
       colors: {
         'darkmode-light': '#2B3743',
         'darkmode-dark': '#202D36'
@@ -14,6 +18,7 @@ module.exports = {
         'vw-10':'10vw',
         'vw-15':'15vw',
         'vw-20':'20vw',
+        'vw-30':'30vw',
         'vw-50':'50vw',
       }
     },

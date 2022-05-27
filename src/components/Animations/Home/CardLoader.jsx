@@ -1,5 +1,5 @@
 
-const Loader = () =>{
+const CardLoader = () =>{
     return(
         <li className={"shadow-md rounded-lg overflow-hidden dark:bg-darkmode-light h-min text-md cursor-pointer"}>
             <div className="animate-pulse flex flex-col space-x-4">
@@ -17,4 +17,4 @@ const Loader = () =>{
     )
 }
 
-export default  Loader;
+export default  CardLoader;

@@ -21,7 +21,7 @@ function App() {
         <div className={`App ${!darkMode ? "dark" : "light"} `}>
             <Nav toggle={darkModeToggle} darkMode={darkMode}/>
             <Routes>
-                <Route path="/" element={<Home darkMode={darkMode} data={data} loading={loading}/>}/>
+                <Route path="/" element={<Home darkMode={darkMode} data={data} loading={loading} err={error}/>}/>
                 <Route path="/country/:id" element={<Country/>}/>
             </Routes>
         </div>

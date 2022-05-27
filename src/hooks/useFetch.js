@@ -13,7 +13,6 @@ export function useFetch(url){
             async function(){
                 try{
                     setLoading(true);
-                    console.log("fetchin")
                     const response = await axios.get(url)
                     if(response.data.length > 1){
                         setData(response.data)

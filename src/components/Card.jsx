@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 
 
-const Card = ({country,i}) =>{
+const Card = ({country}) =>{
     return(
     <li className={"shadow-md rounded-lg overflow-hidden dark:bg-darkmode-light h-min text-md cursor-pointer"}>
         <Tooltip title={country.name.common} placement={"top"}>
@@ -16,7 +16,7 @@ const Card = ({country,i}) =>{
                 <h3 className={"font-black text-lg mb-5 line-clamp-1"}>{country.name.common}</h3>
                 <p className={"py-0.5"}><b>population:</b> {country.population.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}</p>
                 <p className={"py-0.5"}><b>Region:</b> {country.region}</p>
-                <p className={"py-0.5"}><b>Capital:</b> {country.capital}</p>
+                <p className={"py-0.5 line-clamp-1"}><b>Capital:</b> {country.capital}</p>
             </div>
         </Link>
         </Tooltip>

@@ -10,7 +10,6 @@ function Search ({setFilter,setSearch,setPage,setItemOffset}){
         setItemOffset(0)
     }
 
-
     return(
         <div className={"mx-5 sm:mx-10 sm:block md:flex items-center py-10 justify-between"}>
             <label className="relative flex w-full max-w-[35rem] shadow-md md:mr-5 mb-10 md:mb-0">

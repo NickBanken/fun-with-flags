@@ -29,12 +29,9 @@ function Nav ({toggle,darkMode}){
                         </>
 
                     }
-
                 </button>
-
             </div>
         </nav>
-
     )
 }
 
