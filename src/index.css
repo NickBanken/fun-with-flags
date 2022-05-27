@@ -34,14 +34,29 @@ body{
    color:#5C78A3;
 }
 
+.pagination li{
+    width: 42px;
+    height:42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .pagination li a{
     text-align: center;
-    padding: .7rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
 }
 
 @media (min-width: 640px) {
+    .pagination li {
+        width: 80px;
+        height:80px;
+    }
     .pagination li a{
-        padding: 1rem;
+        padding: 28px 0;
+
     }
 }
