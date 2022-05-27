@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 
 
 const Card = ({country}) =>{
-    console.log(country)
     return(
     <li className={"shadow-md rounded-lg overflow-hidden dark:bg-darkmode-light h-min text-md cursor-pointer"}>
         <Tooltip title={country.name.common} placement={"top"}>
