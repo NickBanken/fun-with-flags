@@ -38,14 +38,14 @@ const Country = () =>{
                                 <div className={"flex flex-col md:flex-row gap-x-5"}>
                                     <div className={"flex flex-col gap-3"}>
                                         <p><span
-                                            className={"font-bold "}>Native Name:</span> {Object.values(country.name.nativeName)[0].common}
+                                            className={"font-bold "}>Native Name:</span> {country.name.nativeName ? Object.values(country.name.nativeName)[0].common : "/"}
                                         </p>
                                         <p><span className={"font-bold "}>Population:</span> {
                                             country.population ?
                                                 country.population.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') :
                                                 0}
                                         </p>
-                                        <p><span className={"font-bold "}>Region:</span> {country.region}</p>
+                                        <p><span className={"font-bold "}>Region:</span> {country.region ? country.region : "/"}</p>
                                         <p><span
                                             className={"font-bold "}>Sub Region:</span> {country.subregion ? country.subregion : "/"}
                                         </p>
