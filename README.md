@@ -1,5 +1,7 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
+Check the site out [here](https://fun-with-flags-app.netlify.app/)! 
+
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
