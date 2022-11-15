@@ -1,4 +1,4 @@
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 import {Link} from "react-router-dom";
 
 
@@ -10,7 +10,7 @@ const Card = ({country}) =>{
 
         <Link to={{pathname:`/country/${country.name.common}`}}>
             <div className={"sm:h-vw-20 md:h-vw-15 lg:h-vw-10 h-vw-50 "}>
-                <img className={"w-full h-full object-cover"} src={`${country.flags.png.slice(0,-3)}webp`} alt=""/>
+                <img loading='lazy' className={"w-full h-full object-cover"} src={`${country.flags.png.slice(0,-3)}webp`} alt=""/>
             </div>
             <div className={"p-5 mb-10"}>
                 <h3 className={"font-black text-lg mb-5 line-clamp-1"}>{country.name.common}</h3>

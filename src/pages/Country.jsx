@@ -30,7 +30,7 @@ const Country = () =>{
                     {country &&
                         <div className={"mt-16 flex flex-col md:flex-row items-center md:items-start md:gap-14"}>
                             <div className={"w-full float-left"}>
-                                <img src={country.flags.svg} alt=""/>
+                                <img loading='lazy' src={country.flags.svg} alt=""/>
                             </div>
 
                             <div className={"w-full text-sm mt-10"}>
